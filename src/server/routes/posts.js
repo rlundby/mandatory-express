@@ -14,7 +14,7 @@ route.get('/posts', (req, res) => {
 
     store.getPosts()
         .then(posts => res.json({ posts }));
-})
+});
 
 route.get('/posts/:id', (req, res) => {
     const postId = Number(req.params.id);
@@ -26,7 +26,7 @@ route.get('/posts/:id', (req, res) => {
                 { error }
             );
         });
-})
+});
 
 route.delete("/posts", (req, res) => {
     const { id } = req.body;
@@ -46,6 +46,6 @@ route.post('/posts', (req, res) => {
     store.addPost(postData)
         .then(newPost => res.json({ newPost }));
 
-})
+});
 
 module.exports = route;

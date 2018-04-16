@@ -67,9 +67,6 @@ class EdumentSource {
             method: 'delete',
         })
             .then(response => {
-            if (!response.ok) {
-                throw `Post with ID ${id} not found and could not be deleted`;
-            }
             return {id};
         })
     }

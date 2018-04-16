@@ -39,7 +39,7 @@ fetch('/api/posts', {
 })
     .then(response => response.json())
     .then(res => console.log("DEMO: adding a post", res))
-    .catch(e => console.log("DEMO: Failed to add a new post", e));
+    .catch(e => console.log("DEMO: Failed to add a new post :(", e));
 
 fetch('/api/posts')
     .then(response => response.json())
